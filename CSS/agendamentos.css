@@ -1,0 +1,489 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: auto;
+    scrollbar-color: #ABCCD8 #f6f2e6;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #f6f2e6;
+    color: #333;
+}
+
+header {
+    background-color: rgba(171, 204, 216, 0.9);
+    backdrop-filter: blur(12px);
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.logo img {
+    height: 55px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #2b6f84;
+}
+
+.icone {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #7cc9e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #09597e;
+}
+
+.perfil-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.perfil {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 3px solid white;
+    object-fit: cover;
+    transition: border-color 0.2s ease, filter 0.2s ease;
+}
+
+.perfil-link:hover {
+    transform: scale(1.05);
+}
+
+.perfil-link:hover .perfil {
+    border-color: #2b6f84;
+    filter: brightness(90%);
+}
+
+.banner-agendamento {
+    margin-top: 75px;
+    position: relative;
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+}
+
+.banner-agendamento img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 80px;
+    transform: translateY(-50%);
+    max-width: 650px;
+    color: white;
+}
+
+.tag {
+    background-color: #c2f1ff;
+    color: #1f4e5f;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.banner-content h1 {
+    font-size: 56px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.banner-content p {
+    font-size: 20px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.banner-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-card {
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: 700;
+    transition: 0.3s ease;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-primary,
+.btn-card {
+    background: linear-gradient(135deg, #2b6f84, #1f4e5f);
+    color: white;
+}
+
+.btn-primary:hover,
+.btn-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 15px rgba(43, 111, 132, 0.3);
+}
+
+.btn-secondary {
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: white;
+    color: #1f4e5f;
+}
+
+.info-agendamento {
+    width: 85%;
+    max-width: 1200px;
+    margin: 80px auto;
+    background-color: #daf4fc;
+    border-radius: 24px;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+.info-texto h2 {
+    font-size: 38px;
+    color: #1f4e5f;
+    margin-bottom: 20px;
+}
+
+.info-texto p {
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.info-texto ul {
+    list-style: none;
+}
+
+.info-texto ul li {
+    margin-bottom: 12px;
+    color: #444;
+}
+
+.info-texto ul li i {
+    color: #2b6f84;
+    margin-right: 8px;
+}
+
+.info-card {
+    background: white;
+    border-radius: 20px;
+    padding: 35px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(31,78,95,0.08);
+}
+
+.info-card img {
+    width: 90px;
+    margin-bottom: 20px;
+}
+
+.info-card h3 {
+    color: #1f4e5f;
+    margin-bottom: 15px;
+}
+
+.info-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.profissionais {
+    width: 85%;
+    max-width: 1200px;
+    margin: 100px auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 38px;
+    color: #1f4e5f;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #666;
+}
+
+.cards-profissionais {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border: 2px solid #ABCCD8;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    transition: 0.3s ease;
+    box-shadow: 0 8px 25px rgba(31,78,95,0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #2b6f84;
+    box-shadow: 0 12px 30px rgba(31,78,95,0.12);
+}
+
+.card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 15px auto;
+    display: block;
+    border: 3px solid #ABCCD8;
+    flex-shrink: 0; 
+}
+
+.card:hover img {
+    border-color: #2b6f84;
+}
+
+.card-info {
+    padding: 10px 0 0 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; 
+}
+
+.card-info h3 {
+    font-size: 22px;
+    color: #1f4e5f;
+    margin-bottom: 5px;
+}
+
+.card-info span {
+    display: block;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.card-info a {
+    text-decoration: none;
+    background: linear-gradient(135deg, #2b6f84, #1f4e5f);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: 700;
+    display: inline-block;
+    transition: 0.3s ease;
+    width: 100%;
+    margin-top: auto; 
+}
+
+.card-info a:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(43,111,132,0.25);
+}
+
+.footer {
+    background-color: #1f4e5f;
+    color: white;
+    padding: 60px 8%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-left img {
+    height: 55px;
+    filter: brightness(0) invert(1);
+    margin-bottom: 15px;
+}
+
+.social {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.social a {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: white;
+    color: #1f4e5f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.social a:hover {
+    transform: scale(1.1);
+    background-color: #7cc9e8;
+    color: white;
+}
+
+.footer-col h4 {
+    margin-bottom: 15px;
+    color: #7cc9e8;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col a {
+    color: #c7dbe6;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.footer-col a:hover {
+    color: white;
+    padding-left: 4px;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f6f2e6;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ABCCD8;
+    border-radius: 10px;
+    border: 3px solid #f6f2e6;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #2b6f84;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+        flex-direction: column;
+        height: auto;
+        position: relative;
+    }
+
+    nav {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+
+    .banner-agendamento {
+        margin-top: 0;
+        height: 500px;
+    }
+
+    .banner-content {
+        left: 20px;
+        right: 20px;
+        text-align: center;
+    }
+
+    .banner-content h1 {
+        font-size: 38px;
+    }
+
+    .banner-content p {
+        font-size: 18px;
+    }
+
+    .banner-buttons {
+        flex-direction: column;
+    }
+
+    .info-agendamento {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .info-texto h2 {
+        font-size: 30px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+}

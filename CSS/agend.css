@@ -1,0 +1,459 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:Arial, sans-serif;
+    background-color:#f6f2e6;
+    color:#222;
+    
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;700&display=swap');
+
+
+  main{
+    width:100%;
+}
+
+ /* css do menu*/
+header{
+    width:100%;
+    height:70px;
+    background-color:#ABCCD8;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 40px;
+}
+   .logo img {
+            height: 55px;
+        }
+        nav {
+        margin-left: 400px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #0056b3;
+        }
+        .icone {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #ABCCD8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #09597e;
+            font-weight: bold;
+            }
+            .perfil-link{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+
+        .perfil{
+            width:55px;
+            height:55px;
+            border-radius:50%;
+            object-fit:cover;
+            border:3px solid white;
+        }
+
+
+/* css infromaçoe da proficionais */
+.nomepro{
+    width: 400px;
+    height: auto;
+    margin: 20px 40px 10px 90px ;
+
+}
+.infor{
+     width: 600px;  /* horizontal */
+     height: 300px; /* vertical*/
+     display: flex;
+     justify-content: left;
+     align-items: left;
+     margin-left: 90px;
+
+}
+.infor img{
+    width: 400px;
+    height: 300px;
+    border-radius: 40px; 
+}
+.publico li {
+    width: 700px;  /* horizontal */
+    height: auto    ; /* vertical*/
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+    margin-top: 20px;
+
+}
+.publico h2 {
+    width: 700px;  /* horizontal */
+    height: auto    ; /* vertical*/
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+    margin-top: 20px;
+
+}
+.agen h3{
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* css do calendario */
+.box2{
+    align-content: center;
+    justify-content:center;
+    display:flex;
+    margin: 40px;
+}
+.box2{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease;
+
+}
+
+.box2.mostrar{
+    opacity: 1;
+    transform: translateY(0);
+}
+.titulo{
+    font-size: 25px;
+    margin-left: 10%;
+    margin-top: 80px;
+}
+.container{
+    display:flex;
+    gap:30px;
+    margin-left: 20px;
+}
+
+.calendario{
+
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 20px rgba(0,0,0,.1);
+}
+
+.calendario{
+    width:500px;
+}
+
+.horarios{
+    width:300px;
+    height: 300px;
+}
+.confirmar{
+  width:300px; 
+  margin-top: 30px;
+}
+
+.cabecalho{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.cabecalho button{
+    width:35px;
+    height:35px;
+    border:none;
+    border-radius:5px;
+    background:#1f4e5f;
+    color:white;
+    cursor:pointer;
+}
+
+.dias-semana,
+.dias{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    gap:5px;
+    text-align:center;
+}
+
+.dias-semana div{
+    font-weight:bold;
+    padding:10px 0;
+}
+
+.dias div{
+    padding:12px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.dias div:hover{
+    background:#ddd;
+}
+
+.hoje{
+    background:#1f4e5f;
+    color:white;
+    font-weight:bold;
+}
+
+.passado{
+    color:#bdbdbd;
+    cursor:not-allowed !important;
+}
+
+.passado:hover{
+    background:transparent !important;
+}
+
+.ativo{
+    background:#5799b3b4 !important;
+    color:white;
+}
+
+#listaHorarios{
+    background: rgba(255, 255, 255, 0.342);
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:10px;
+    margin-top:20px;
+}
+.button{
+    background-color: rgba(255, 255, 255, 0.26);
+    border: solid #4f5f641f;;
+}
+#listaHorarios button{
+    margin-top: 10px;
+    padding:10px;
+    border:1px solid #1f4e5f49;
+    cursor:pointer;
+}
+
+#listaHorarios button:hover{
+    background:#1f4e5fc0;
+    color:white;
+}
+
+#resumo{
+    margin-top:15px;
+    font-weight:bold;
+}
+
+.btn-confirmar{
+    width:100%;
+    margin-top:15px;
+    padding:12px;
+    border-radius:5px;
+    background:#1f4e5f;
+    color:white;
+    cursor:pointer;
+    transition: 0.3s;
+}
+.btn-confirmar:houver{
+    background:#2c6e86;
+    cursor:pointer;
+    transform: scale(1.03);
+}
+
+/* contato com proficional*/
+.box3{
+    width: 100%;
+    height: 200px;
+    text-align: center;
+   
+}
+.titulo1{
+    
+    font-size: 25px;
+    font-weight: bold;
+    margin-top:10%;
+}
+.wtts button{
+    width: 300px;
+    height: 40px;
+    margin: 20px;
+    background: #1f4e5f;
+    color:white;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover{
+    background: #396c80;
+    transform: scale(1.05);
+}
+
+/* css fadebak*/
+
+
+ /* css do footer*/
+/* Rodapé */
+.footer {
+    background-color: #1f4e5f;
+    color: white;
+    padding: 60px max(5%, calc((100vw - 1200px)/2));
+    margin-top: auto;
+}
+            
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+            
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+            
+.footer-left img {
+    height: 55px;
+    width: fit-content;
+    filter: brightness(0) invert(1);
+}
+        
+.footer-left h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #e8f4f8;
+}
+            
+.social {
+    display: flex;
+    gap: 12px;
+    margin-top: 5px;
+}
+            
+.social a {
+    font-size: 18px;
+    color: #1f4e5f;
+    background: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+            
+.social a:hover {
+    background: #7cc9e8;
+    color: #1f4e5f;
+    transform: translateY(-2px);
+}
+            
+.footer-col {
+    display: flex;
+    flex-direction: column;
+}
+        
+.footer-col h4 {
+    margin: 0 0 15px 0;
+    color: #7cc9e8;
+    font-size: 16px;
+}
+            
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+            
+.footer-col a {
+    text-decoration: none;
+    color: #c7dbe6;
+    font-size: 14px;
+    transition: 0.2s;
+}
+            
+.footer-col a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Media Queries para Mobile */
+@media (max-width: 768px) {
+    header {
+        padding: 0 20px;
+    }
+
+    nav ul {
+        display: none; /* Em ambiente real, aqui entraria um menu hambúrguer */
+    }
+
+    .banner {
+        height: 450px;
+    }
+
+    .banner-content {
+        left: 20px;
+        right: 20px;
+        text-align: center;
+    }
+
+    .banner-content h1 {
+        font-size: 34px;
+    }
+
+    .banner-content p {
+        font-size: 18px;
+    }
+
+    .botoes {
+        justify-content: center;
+    }
+
+    .sobre {
+        width: 95%;
+        padding: 25px;
+        margin: 40px auto;
+    }
+
+    .sobre-grid {
+        grid-template-columns: 1fr; 
+        gap: 30px;
+    }
+
+    .agenda-box {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+
+    .mapa-container {
+        height: 300px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
